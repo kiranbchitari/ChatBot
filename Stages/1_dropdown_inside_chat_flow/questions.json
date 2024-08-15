@@ -1,0 +1,69 @@
+{
+    "questions": [
+        {
+            "id": "greeting",
+            "question": "Hello! Welcome to our insurance service. I'm here to help you find the best plan for your needs. Could you please say hello or greet me back so we can get started?",
+            "inputType": "text",
+            "validationMessage": "I'm sorry, I didn't catch that. Could you please greet me back?"
+          },
+        {
+            "id": "product",
+            "question": "Please select a product from the list below that best suits your needs.",
+            "inputType": "dropdown",
+            "options": [
+                "Select an option",
+                "Activ Health Enhanced",
+                "Activ Health Plus Enhanced",
+                "Activ One Max",
+                "Activ Secure",
+                "Activ Assure Diamond",
+                "Activ Assure Diamond Plus",
+                "Activ Fit Plus",
+                "Activ Care Standard",
+                "Global Health Secure",
+                "Arogya Sanjeevni",
+                "Super Health Top Up Plan B"
+            ],
+            "validationMessage": "I'm sorry, I couldn't understand your selection. Could you please choose a product from the dropdown?"
+        },
+        {
+            "id": "plan",
+            "question": "Thank you! Now, please select a plan that works best for you.",
+            "inputType": "dropdown",
+            "options": [
+                "Select an option",
+                "ENHANCED",
+                "ESSENTIAL",
+                "PREMIER"
+            ],
+            "validationMessage": "I'm sorry, I couldn't understand your selection. Could you please choose a plan from the dropdown?"
+        },
+        {
+            "id": "name",
+            "question": "Hi there! I'm so glad you're here! Before we get started, could you do me a huge favor and tell me your name? I'd love to know who I'm chatting with!",
+            "inputType": "text",
+            "validationMessage": "I'm sorry, I couldn't catch your name. Could you please tell me your name again?"
+        },
+        {
+            "id": "dob",
+            "question": "Great to meet you, {name}! Could you please tell me your date of birth? Please provide it in the format DD/MM/YYYY.",
+            "inputType": "text",
+            "validationMessage": "I'm sorry, I couldn't understand your date of birth. Could you please provide it in a format like DD/MM/YYYY or Month Day, Year?"
+        },
+        {
+            "id": "gender",
+            "question": "Thank you! And lastly, could you please tell me your gender or preferred pronouns?",
+            "inputType": "dropdown",
+            "options": [
+                "Select an option",
+                "Male",
+                "Female",
+                "Non-binary",
+                "Prefer not to say",
+                "Other"
+            ],
+            "validationMessage": "I'm sorry, I couldn't understand your response about gender or pronouns. Could you please select an option from the dropdown?"
+        }
+    ],
+    "finalMessage": "Thank you, {name}! I've got all the information. Your date of birth is {dob}, and I'll use {gender} pronouns for you. Is there anything else I can help you with?"
+}
