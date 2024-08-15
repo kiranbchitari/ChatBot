@@ -1,0 +1,39 @@
+{
+    "greeting": "hi",
+    "product": "Arogya Sanjeevni",
+    "plan": "ESSENTIAL",
+    "name": "snehal",
+    "dob": "28/10/1996",
+    "gender": "Male",
+    "insurance_service": "Family Floater",
+    "familyFloaterDetails": "3",
+    "numberOfSons": "2",
+    "numberOfDaughters": "1",
+    "sonDetails": "Rahul, age 10",
+    "daughterDetails": "sneha, age 12"
+}
+
+{
+    "greeting": "hi",
+    "product": "Arogya Sanjeevni",
+    "plan": "ESSENTIAL",
+    "name": "snehal",
+    "dob": "28/10/1996",
+    "gender": "Male",
+    "insurance_service": "Family Floater",
+    "familyFloaterDetails": "3",
+    "numberOfSons": "2",
+    "numberOfDaughters": "1",
+    "sonDetails": {
+        "name": "Kiran",
+        "age": 20
+    },
+    {
+        "name": "Asha",
+        "age": 28
+    }
+    "daughterDetails": {
+        "name": "Mahi",
+        "age": 4
+    }
+}

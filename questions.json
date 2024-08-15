@@ -2,10 +2,10 @@
     "questions": [
         {
             "id": "greeting",
-            "question": "Hello! Welcome to our insurance service. I'm here to help you find the best plan for your needs. Could you please say hello or greet me back so we can get started?",
+            "question": "Hello! Welcome to our insurance service. I am here to help you find the best plan for your needs. Could you please say hello or greet me back so we can get started?",
             "inputType": "text",
             "validationMessage": "I'm sorry, I didn't catch that. Could you please greet me back?"
-          },
+        },
         {
             "id": "product",
             "question": "Please select a product from the list below that best suits your needs.",
@@ -52,7 +52,7 @@
         },
         {
             "id": "gender",
-            "question": "Thank you! And lastly, could you please tell me your gender or preferred pronouns?",
+            "question": "Could you please tell me your gender or preferred pronouns?",
             "inputType": "dropdown",
             "options": [
                 "Select an option",
@@ -63,7 +63,74 @@
                 "Other"
             ],
             "validationMessage": "I'm sorry, I couldn't understand your response about gender or pronouns. Could you please select an option from the dropdown?"
+        },
+        {
+            "id": "pincode",
+            "question": "Now, could you please provide your pincode?",
+            "inputType": "text",
+            "validationMessage": "I'm sorry, the pincode you provided doesn't seem to be valid. Could you please enter a 6-digit pincode?"
+        },
+        {
+            "id": "insurance_service",
+            "question": "Are you interested in an individual plan or a family floater?",
+            "inputType": "dropdown",
+            "options": [
+                "Select an option",
+                "Individual Plan",
+                "Family Floater"
+            ],
+            "validationMessage": "Please select an option to proceed."
+        },
+        {
+            "id": "familyFloaterDetails",
+            "condition": {
+                "previousQuestionId": "insurance_service",
+                "expectedAnswer": "Family Floater"
+            },
+            "question": "Great choice! How many family members do you need to cover?",
+            "inputType": "text",
+            "validationMessage": "Please enter the number of family members."
+        },
+        {
+            "id": "numberOfSons",
+            "condition": {
+                "previousQuestionId": "familyFloaterDetails",
+                "expectedAnswer": "1 or more"
+            },
+            "question": "How many sons do you have?",
+            "inputType": "text",
+            "validationMessage": "Please enter the number of sons."
+        },
+        {
+            "id": "numberOfDaughters",
+            "condition": {
+                "previousQuestionId": "familyFloaterDetails",
+                "expectedAnswer": "1 or more"
+            },
+            "question": "How many daughters do you have?",
+            "inputType": "text",
+            "validationMessage": "Please enter the number of daughters."
+        },
+        {
+            "id": "sonDetails",
+            "condition": {
+                "previousQuestionId": "numberOfSons",
+                "expectedAnswer": "1 or more"
+            },
+            "question": "Please enter the details for your son.",
+            "inputType": "text",
+            "validationMessage": "Please provide the details for your son."
+        },
+        {
+            "id": "daughterDetails",
+            "condition": {
+                "previousQuestionId": "numberOfDaughters",
+                "expectedAnswer": "1 or more"
+            },
+            "question": "Please enter the details for your daughter.",
+            "inputType": "text",
+            "validationMessage": "Please provide the details for your daughter."
         }
     ],
-    "finalMessage": "Thank you, {name}! I've got all the information. Your date of birth is {dob}, and I'll use {gender} pronouns for you. Is there anything else I can help you with?"
+    "finalMessage": "Thank you, {name}! I've got all the information. Your date of birth is {dob}, and I'll use {gender} pronouns for you. And you selected {insurance_service} plan. Is there anything else I can help you with?"
 }
